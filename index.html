@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="./css/jquery.modal.css">
 		<link rel="stylesheet" href="./css/fa.all.min.css">
 		<link rel='shortcut icon' type="image/x-icon" href='./favicon.ico'>
-		<link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Lato&family=Montserrat&family=Ubuntu&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
 	</head>
 
 	<body>
@@ -23,14 +23,14 @@
 					<div id="playerMiddleLine"><p id="radioPlayer"><i onclick="radioPlayerPlay()" class="fa fa-play-circle"></i><i onclick="radioPlayerPause()" class="fa fa-pause-circle"></i><span class="span8">&nbsp;</span><input id="volume" type="range" min="0" max="100" step="1" oninput="setVolume(this.value)" onchange="setVolume(this.value)"><span class="span8">&nbsp;</span>
 					<div id="equaliser-container"> <ol class="equaliser-column"> <li class="colour-bar"></li> </ol> <ol class="equaliser-column"> <li class="colour-bar"></li> </ol> <ol class="equaliser-column"> <li class="colour-bar"></li> </ol> <ol class="equaliser-column"> <li class="colour-bar"></li> </ol> <ol class="equaliser-column"> <li class="colour-bar"></li> </ol></div>
 					<span class="rememberHelp" id="playerAbout" title="SMAN4 Muara Teweh-Radio Player"><i style ="font-size:1rem" class="far fa-question-circle"></i></span></div><div id="currentVolume"></div>
-					<div id="playerBottomLine"><p id="playerRememberHelp"><span class="rememberHelp" title="If you check this box, next time when you load or refresh this page your set volume will remain the same."><input type="checkbox" id="rememberVolume" onclick="rememberCheck()"/> SMAN 4 M T - radio </span></p><div id="playerLogo"><p id="playerClanhouseLogo"><a href="https://sman4muarateweh.sch.id/radio" target="_blank"><img src="./sman4muarateweh_24x28.png" alt="SMAN4 Muara Teweh Logo"></a></p><p id="playerJetstreamLogo"><a href="https://sman4muarateweh.sch.id/radio" target="_blank"><img src="./sman4muarateweh_24x28.png" alt="SMAN4 Muara Teweh Radio Logo"></a></p></div>
+					<div id="playerBottomLine"><p id="playerRememberHelp"><span class="rememberHelp" title="If you check this box, next time when you load or refresh this page your set volume will remain the same."><input type="checkbox" id="rememberVolume" onclick="rememberCheck()"/> SMAN 4 M T - radio </span></p><div id="playerLogo"><p id="playerClanhouseLogo"><a href="https://www.sman4muarateweh.sch.id/2014/07/eradio.html" target="_blank"><img src="sman4muarateweh_24x28.png" alt="SMAN4 Muara Teweh Logo"></a></p><p id="playerJetstreamLogo"><a href="https://www.sman4muarateweh.sch.id/2014/07/eradio.html" target="_blank"><img src="sman4muarateweh_24x28.png" alt="SMAN4 Muara Teweh Radio Logo"></a></p></div>
 					<audio id="radio" preload="none">Maaf,perangkatmu tidak didukung <code>&lt;audio&gt;</code> element</audio></div>
 				</div>
 
 			</div>
 		</div>
 		<div class="linkButtons">
-		   
+
 		</div>
 
 		<div class="toggleButtons">
@@ -53,7 +53,7 @@
 				<script>
 					var rememberVolume = document.getElementById("rememberVolume");
 					var radio = document.getElementById("radio");
-					var streamURL = "a.mp3" + getTime();
+					var streamURL = "b.mp3" + getTime();
 					var helpMoveTimer;
 					var playerResizeTimer;
 					var playerResizeTimer2;
@@ -129,7 +129,7 @@
 								radio.pause();
 								radio.setAttribute("src", "");
 								setTimeout(function() {
-									radio.load(); 
+									radio.load();
 								});
 							}, 2000);
 							clearInterval(currentlyPlayingTimer);
@@ -388,9 +388,9 @@
 					var timerRemainingSecondsInterval;
 					var timerTimeout;
 
-					var timerIntervalMinute = 60000; 
-					var timerIntervalSecond = 1000; 
-					var timerIntervalHour = 3600000; 
+					var timerIntervalMinute = 60000;
+					var timerIntervalSecond = 1000;
+					var timerIntervalHour = 3600000;
 
 					function timerModalOpen() {
 						$("#timerModal").modal({
